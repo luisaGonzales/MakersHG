@@ -6,12 +6,12 @@ import {Menu} from './Components/FirstSelection';
 import {Layers} from './Components/Layers';
 import {Check} from './Components/Check';
 
-const App = ({title})=> {
+const App = ({title, genderSelect})=> {
   return(
     <HashRouter>
       <Switch>
-          <Route exact path="/" render={() => <Menu title={title}/>} />
-          <Route exact path="/menu" render={() => <Menu title={title}/>} />
+          <Route exact path="/" render={() => <Menu title={title} genderSelect={genderSelect} />} />
+          <Route exact path="/menu" render={() => <Menu title={title} genderSelect={genderSelect} />} />
           <Route exact path="/layers" render={() => <Layers />} />
           <Route exact path="/check" render={() => <Check />} />
           <Route render={() => <Redirect to={"/"} />}/>
@@ -20,5 +20,5 @@ const App = ({title})=> {
   );
 }
 
-const mapToProps = ({title}) => ({title})
+const mapToProps = ({title, genderSelect}) => ({title, genderSelect})
 export default connect (mapToProps)(App);
