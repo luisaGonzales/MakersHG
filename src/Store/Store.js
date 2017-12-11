@@ -5,7 +5,12 @@ const initialState = {
     gender: null,
     genderSelect: false, 
     age: null,
-    ageSelected: false
+    ageSelected: false, 
+    
+    builder : {
+        position : null,
+        imgs : []
+    }
 }
 
 const store = createStore(initialState);
