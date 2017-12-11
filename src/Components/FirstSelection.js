@@ -3,13 +3,20 @@ import {Redirect, NavLink} from 'react-router-dom';
 import {Grid, Row, Col} from 'react-bootstrap';
 import {selectGender, selectAge} from '../Actions/Actions';
 
-export const Menu = ({genderSelect, title}) => {
+export const Menu = ({genderSelect, title, ageSelected}) => {
     return (
         <Grid fluid className="text-center">
             <h1 className="Text-capitalize">{title}</h1>
             <p>Costumiza camisetas en 3 simples pasos</p>
-            {!genderSelect && <Gender />}
-            {genderSelect && <Age />}
+            {
+                !genderSelect && <Gender />
+            }
+            {
+                genderSelect && <Age />
+            }
+            {
+                ageSelected && <Redirect to="/layers"/> 
+            }
         </Grid>
     );
 }
