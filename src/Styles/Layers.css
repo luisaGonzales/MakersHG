@@ -165,11 +165,19 @@ body {
     position: relative;
     
 }
-.GroupTest {
-     /* margin: 1.9em; */
+ .groupSpan {
+     color:black;
+     
 }
+.groupSpan:active {
+    background: black;
+}
+
 .test {
     background-color: green;
     max-height: 450px;
     max-width: 350px;
+}
+* {
+    
 }
