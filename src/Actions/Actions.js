@@ -51,4 +51,17 @@ export const changeView = view => {
 
 export const selectColor = (color) => {
     console.log("colorpick", color);
+    store.setState({
+        color: color
+    });
+    console.log(store.getState().color);
+}
+
+export const saveImg = (img) => {
+    console.log("img", img);
+    
+    store.setState({
+        img: img
+    });
+
 }

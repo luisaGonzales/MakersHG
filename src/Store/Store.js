@@ -30,6 +30,7 @@ const initialState = {
     //     `http://174.138.48.60/makers/build/Assets/img/${gender}/${age}/${color}/right.png`,
     //     `http://174.138.48.60/makers/build/Assets/img/${gender}/${age}/${color}/left.png`        
     // ],
+    logo: 'http://174.138.48.60/Logo.png',
     imgSelected : 0, 
 }
 

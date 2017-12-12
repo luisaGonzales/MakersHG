@@ -12,9 +12,10 @@ import {
   FieldGroup
 } from "react-bootstrap";
 import "../Styles/Layers.css";
+import '../Styles/Colors.css';
 import { Brand } from "./Brand";
 import { Sizes } from "./Sizes";
-import { changeView, selectColor } from "../Actions/Actions";
+import { changeView, selectColor, saveImg } from "../Actions/Actions";
 import { ImageUpload } from "./Upload";
 import { Redirect } from "react-router-dom";
 import { NavLink } from "react-router-dom";
@@ -24,7 +25,7 @@ const mapp =  [ 'front.png', 'back.png', 'right.png', 'left.png' ];
 
 export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size, gender, color, colorOptions}) => {
   const img =  `http://174.138.48.60/makers/build/Assets/img/${gender}/${age}/${color}/` + mapp[imgSelected];
-  
+  saveImg(img);
   return (
     <Grid fluid>
       <Brand />
@@ -66,7 +67,7 @@ const Colors = ({colorOptions, gender, age}) => {
     console.log(colorPick);
     const colors = colorPick.map((color, index) => {
         return(
-            <Button key={index} className={color} onClick={()=>{selectColor(color)}}> . </Button>
+            <Button key={index} className={color} onClick={()=>{selectColor(color)}}>  </Button>
         );
     })
   return (
