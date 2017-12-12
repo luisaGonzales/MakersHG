@@ -12,12 +12,11 @@ const App = ({title, genderSelect, ageSelected, age, sizeOptions, imgs, imgSelec
       <Switch>
           <Route exact path="/" render={() => <Menu title={title} genderSelect={genderSelect} ageSelected={ageSelected} />} />
           <Route exact path="/menu" render={() => <Menu title={title} genderSelect={genderSelect} ageSelected={ageSelected} />} />
-          <Route exact path="/layers" render={() => <Layers age={age}  sizeOptions={sizeOptions} imgs={imgs} imgSelected={imgSelected} />} />
+          <Route exact path="/layers" render={() => <Layers size={size} age={age}  sizeOptions={sizeOptions} imgs={imgs} imgSelected={imgSelected} />} />
           <Route exact path="/check" render={() => <Check imgs={imgs} color={color} gender={gender} age={ageTxt} size={size} />} />
           <Route render={() => <Redirect to={"/"} />}/>
       </Switch>
-    </HashRouter>
-  );
+    </HashRouter>)
 }
 
 const mapToProps = ({title, genderSelect, ageSelected, age, sizeOptions, imgs, imgSelected, size, gender, color, ageTxt}) => ({title, genderSelect, ageSelected, age,  sizeOptions, imgs, imgSelected, size, gender, color, ageTxt})

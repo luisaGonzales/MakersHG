@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import {Row, Col, Button} from 'react-bootstrap';
 import {selectSize} from '../Actions/Actions';
+import "../Styles/Layers.css";
 
-export const Sizes = ({age, sizeOptions}) => {
-    console.log(age);
-    const listSizes = sizeOptions[age].map((size,index) => {
-        return <Button className="groupSpan" key={index} onClick={() => {
-              selectSize(size);
+
+export const Sizes = ({age, sizeOptions, size}) => {
+    const listSizes = sizeOptions[age].map((mysize,index) => {
+        return <Button className={size == mysize ? "groupActive" : "groupSpan"} key={index} onClick={() => {
+              selectSize(mysize);
             }}>
-            <p className=" text-center"> {size}</p>
+            <p className=" text-center"> {mysize}</p>
           </Button>;
     });
     return (

@@ -21,7 +21,7 @@ export const Age = () => {
               selectAge(1);
             }}
           >
-            Niño/Niña
+            Niño
           </div>
         </Col>
         <Col md={4}>
