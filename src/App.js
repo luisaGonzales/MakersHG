@@ -12,7 +12,7 @@ const App = ({title, genderSelect, ageSelected, age, sizeOptions, imgs, imgSelec
         <Route exact path="/" render={() => <Menu title={title} genderSelect={genderSelect} ageSelected={ageSelected} />} />
         <Route exact path="/menu" render={() => <Menu title={title} genderSelect={genderSelect} ageSelected={ageSelected} />} />
         <Route exact path="/layers" render={() => <Layers size={size} age={age} sizeOptions={sizeOptions} imgs={imgs} imgSelected={imgSelected} gender={gender} color={color} colorOptions={colorOptions} />} />
-        <Route exact path="/check" render={() => <Check colorOptions={colorOptions} imgs={imgs} color={color} gender={gender} imgSelected={imgSelected} age={ageTxt} size={size} />} />
+        <Route exact path="/check" render={() => <Check colorOptions={colorOptions} imgs={imgs} color={color} gender={gender} imgSelected={imgSelected} ageN={age} age={ageTxt}  size={size} />} />
         <Route render={() => <Redirect to={"/"} />} />
       </Switch>
     </HashRouter>;
