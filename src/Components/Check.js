@@ -21,7 +21,7 @@ export const Check = () => {
                 <div>
                     <h2>DETALLES</h2>
                     <div className='colors'>
-                        <p>Color</p>
+                        <p>Color:</p>
                     </div>
                 </div>
                 </Col>

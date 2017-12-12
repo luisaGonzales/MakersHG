@@ -12,6 +12,7 @@ import {
 import "../Styles/Layers.css";
 import {Sizes} from './Sizes';
 import {changeView} from '../Actions/Actions';
+import {Redirect} from 'react-router-dom';
 
 const Colors = () => {
   return (
@@ -58,7 +59,7 @@ export const Layers = ({age, sizeOptions, imgs, imgSelected }) => {
             </div>
           </div>
           <Add />
-          <Button className="center-block">Finalizar</Button>
+        <Button>Finalizar</Button>
         </Col>
         <Col md={6} sm={6}>
           <div className="GroupTest">
