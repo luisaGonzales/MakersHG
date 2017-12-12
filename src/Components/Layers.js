@@ -58,6 +58,7 @@ export const Layers = ({age, sizeOptions, imgs, imgSelected }) => {
             </div>
           </div>
           <Add />
+          <Button className="center-block">Finalizar</Button>
         </Col>
         <Col md={6} sm={6}>
           <div className="GroupTest">
