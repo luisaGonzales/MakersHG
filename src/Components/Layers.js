@@ -26,9 +26,11 @@ const mapp =  [ 'front.png', 'back.png', 'right.png', 'left.png' ];
 export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size, gender, color, colorOptions}) => {
   const img =  `http://174.138.48.60/makers/build/Assets/img/${gender}/${age}/${color}/` + mapp[imgSelected];
   saveImg(img);
-  return (
-    <Grid fluid>
+  return <Grid fluid>
       <Brand />
+      <NavLink className="groupSpan btn" to="/menu">
+        <i class="fa fa-arrow-left fa-4x" aria-hidden="true" />
+      </NavLink>
       <Row>
         <Col md={4} sm={4}>
           <div className="GroupTest">
@@ -37,29 +39,24 @@ export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size, gender
             </div>
           </div>
           <Add imgSelected={imgSelected} />
-          <NavLink to="/menu">Atrás</NavLink>
-          <NavLink to="/check">Finalizar</NavLink>
         </Col>
         <Col md={7} sm={7}>
           <Row className="GroupTest">
             <Col sm={6} md={6} lg={6} xs={12}>
-              {" "}
               <Design />
             </Col>
             <Col sm={6} md={6} lg={6} xs={12}>
-              <Colors colorOptions={colorOptions} gender={gender} age={age}/>
-              <Sizes
-                imgSelected={imgSelected}
-                size={size}
-                age={age}
-                sizeOptions={sizeOptions}
-              />
+              <Colors colorOptions={colorOptions} gender={gender} age={age} />
+              <Sizes imgSelected={imgSelected} size={size} age={age} sizeOptions={sizeOptions} />
+              <br/>
+              <NavLink className="groupSpan btn finish" to="/check">
+                <b> FINALIZAR</b>
+              </NavLink>
             </Col>
           </Row>
         </Col>
       </Row>
-    </Grid>
-  );
+    </Grid>;
 };
 
 const Colors = ({colorOptions, gender, age}) => {
