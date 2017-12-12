@@ -6,16 +6,17 @@ import {
   ButtonGroup,
   Button,
   DropdownButton,
-  MenuItem, 
+  MenuItem,
   Image,
-  FieldGroup 
+  FieldGroup
 } from "react-bootstrap";
 import "../Styles/Layers.css";
-import {Sizes} from './Sizes';
-import {changeView} from '../Actions/Actions';
-import {ImageUpload} from './Upload';
-import {Redirect} from 'react-router-dom';
-import {NavLink} from 'react-router-dom';
+import { Sizes } from "./Sizes";
+import { changeView } from "../Actions/Actions";
+import { ImageUpload } from "./Upload";
+import { Redirect } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Brand } from "./FirstSelection";
 
 const Colors = () => {
   return (
@@ -29,15 +30,13 @@ const Colors = () => {
   );
 };
 
-
-
 const Design = () => {
   return (
-    <div >
+    <div>
       <h2>Diseñar Articulo</h2>
       <ButtonGroup>
         <Button href="#">Agregar Texto</Button>
-        
+
         <Button href="#">Agregar Imagen</Button>
       </ButtonGroup>
     </div>
@@ -46,17 +45,43 @@ const Design = () => {
 
 const Add = () => {
   return (
-    <ButtonGroup     className="btnGroup justified" >
-      <Button onClick={()=>{changeView(0)}}>Frente</Button>
-      <Button onClick={()=>{changeView(1)}}>Espalda</Button>
-      <Button onClick={()=>{changeView(2)}}>Manga Derecha</Button>
-      <Button onClick={()=>{changeView(3)}}>Manga Izquierda</Button>
+    <ButtonGroup className="btnGroup justified">
+      <Button
+        onClick={() => {
+          changeView(0);
+        }}
+      >
+        Frente
+      </Button>
+      <Button
+        onClick={() => {
+          changeView(1);
+        }}
+      >
+        Espalda
+      </Button>
+      <Button
+        onClick={() => {
+          changeView(2);
+        }}
+      >
+        Manga Derecha
+      </Button>
+      <Button
+        onClick={() => {
+          changeView(3);
+        }}
+      >
+        Manga Izquierda
+      </Button>
     </ButtonGroup>
   );
 };
 
-export const Layers = ({age, sizeOptions, imgs, imgSelected }) => {
-  return <Grid fluid>
+export const Layers = ({ age, sizeOptions, imgs, imgSelected }) => {
+  return (
+    <Grid fluid>
+      <Brand/>
       <Row>
         <Col md={6} sm={6}>
           <div className="GroupTest">
@@ -65,7 +90,7 @@ export const Layers = ({age, sizeOptions, imgs, imgSelected }) => {
             </div>
           </div>
           <Add />
-        <NavLink to='/check'>Finalizar</NavLink>
+          <NavLink to="/check">Finalizar</NavLink>
         </Col>
         <Col md={6} sm={6}>
           <div className="GroupTest">
@@ -75,5 +100,6 @@ export const Layers = ({age, sizeOptions, imgs, imgSelected }) => {
           </div>
         </Col>
       </Row>
-    </Grid>;
+    </Grid>
+  );
 };
