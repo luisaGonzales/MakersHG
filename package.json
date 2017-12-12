@@ -2,7 +2,6 @@
   "name": "makers",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://luisaGonzales.github.io/MakersHG",
   "dependencies": {
     "firebase": "^4.8.0",
     "react": "^16.2.0",

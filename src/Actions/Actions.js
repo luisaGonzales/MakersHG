@@ -52,16 +52,38 @@ export const changeView = view => {
 export const selectColor = (color) => {
     console.log("colorpick", color);
     store.setState({
-        color: color
+        color: color, 
+        allImage: null
     });
     console.log(store.getState().color);
 }
 
 export const saveImg = (img) => {
     console.log("img", img);
-    
+
     store.setState({
         img: img
     });
 
+}
+
+export const draw = () => {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var imageObj1 = new Image();
+    var imageObj2 = new Image();
+    imageObj1.setAttribute('crossOrigin', 'anonymous'); //
+    imageObj1.src = `http://174.138.48.60/makers/build/Assets/img/${store.getState().gender}/${store.getState().age}/${store.getState().color}/front.png`;
+    imageObj1.onload = function () {
+        ctx.drawImage(imageObj1, 0, 10, 600, 500);
+        imageObj2.setAttribute('crossOrigin', 'anonymous'); // works for me
+        imageObj2.src = store.getState().logo;        
+        imageObj2.onload = function () {
+            ctx.drawImage(imageObj2, 200, 150, 80, 50);
+            var img = c.toDataURL("image/png");
+            store.setState({
+                allImage : img,
+            })
+        }
+    };
 }

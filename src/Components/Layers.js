@@ -19,13 +19,15 @@ import { changeView, selectColor, saveImg } from "../Actions/Actions";
 import { ImageUpload } from "./Upload";
 import { Redirect } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import {draw} from '../Actions/Actions';
 // import Center from 'react-center';
 
 const mapp =  [ 'front.png', 'back.png', 'right.png', 'left.png' ]; 
 
-export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size, gender, color, colorOptions}) => {
-  const img =  `http://174.138.48.60/makers/build/Assets/img/${gender}/${age}/${color}/` + mapp[imgSelected];
-  saveImg(img);
+export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size, gender, color, colorOptions, allImage}) => {
+  let img =  `http://174.138.48.60/makers/build/Assets/img/${gender}/${age}/${color}/` + mapp[imgSelected];
+ if ( allImage)
+    img = allImage; 
   return (
     <Grid fluid>
       <Brand />
@@ -117,7 +119,9 @@ const Design = () => {
 
       <Row className="addGroup">
         <div>
-          <Button href="#" className="groupSpan add">
+          <Button onClick={()=> {
+              draw();
+          }} className="groupSpan add">
             Agregar Imagen
           </Button>
         </div>
