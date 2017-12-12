@@ -6,7 +6,8 @@ const initialState = {
     genderSelect: false, 
     age: null,
     ageSelected: false, 
-    sizes : [["XS", "S", "M", "L", "XL", "XXL", "XXXL"], ["10", "12", "14", "16"], ["3", "6", "9", "12", "24"]],
+    sizeOptions : [["XS", "S", "M", "L", "XL", "XXL", "XXXL"], ["10", "12", "14", "16"], ["3", "6", "9", "12", "24"]],
+    size : null, 
     builder : {
         position : null,
         imgs : []

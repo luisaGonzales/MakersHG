@@ -9,18 +9,7 @@ import {
   MenuItem
 } from "react-bootstrap";
 import "../Styles/Layers.css";
-
-const Sizes = () => {
-  return (
-    <div className="center-block">
-      <h2>Tallas</h2>
-      <ButtonGroup>
-        <Button href="#">A</Button>
-        <Button href="#">A</Button>
-      </ButtonGroup>
-    </div>
-  );
-};
+import {Sizes} from './Sizes';
 
 const Colors = () => {
   return (
@@ -57,7 +46,7 @@ const Add = () => {
   );
 };
 
-export const Layers = () => {
+export const Layers = ({age, sizeOptions }) => {
   return <Grid fluid>
       <Row>
         <Col md={6} sm={6}>
@@ -73,7 +62,7 @@ export const Layers = () => {
           <div className="GroupTest">
             <Design />
             <Colors />
-            <Sizes />
+            <Sizes age={age} sizeOptions={sizeOptions} />
           </div>
         </Col>
       </Row>

@@ -20,3 +20,11 @@ export const selectAge = (age) => {
     console.log('store age', store.getState().age);
     firebase.database().ref('users/age').set(store.getState().age);
 }
+
+export const selectSize = (size) => {
+    console.log("sizeSIZE", size);
+    store.setState({
+        size : size
+    });
+    console.log("store size", store.getState().size);
+}

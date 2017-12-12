@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import {Row, Col} from 'react-bootstrap';
+import {selectSize} from '../Actions/Actions';
 
-export const Sizes = ({age, sizes}) => {
+export const Sizes = ({age, sizeOptions}) => {
     console.log(age);
-    const listSizes = sizes[age].map((size,index) => {
+    const listSizes = sizeOptions[age].map((size,index) => {
         return ( 
-            <span key={index}>{size}</span>
+            <span key={index} onClick={()=>{selectSize(size)}}>{size}</span>
         );
     });
     return (
