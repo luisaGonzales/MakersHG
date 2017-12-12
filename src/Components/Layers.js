@@ -5,6 +5,7 @@ import {
   Col,
   ButtonGroup,
   Button,
+  ButtonToolbar,
   DropdownButton,
   MenuItem, 
   Image,
@@ -16,12 +17,17 @@ import {changeView} from '../Actions/Actions';
 import {ImageUpload} from './Upload';
 import {Redirect} from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
+// import Center from 'react-center';
 
 const Colors = () => {
   return (
     <div>
       <h2>Colores</h2>
       <ButtonGroup>
+        <Button href="#">A</Button>
+        <Button href="#">A</Button>
+        <Button href="#">A</Button>
+        <Button href="#">A</Button>
         <Button href="#">A</Button>
         <Button href="#">A</Button>
       </ButtonGroup>
@@ -34,57 +40,71 @@ const Design = () => {
   return (
     <div>
       <h2>Diseñar Articulo</h2>
+  
       <Row className="addGroup">
-      <ButtonGroup >
-        <Button href="#" className="add">Agregar Texto</Button>
-        <Button href="#" className="add">Agregar Imagen</Button>
-      </ButtonGroup>
-      </Row>
-      <Row>
-        <Col >
-        <div className="keyDirection">
-        <Col className="keys">
-        <Button className="btnD">↑</Button>
-        </Col>
-        <ButtonGroup  className="btnD">
+      <div>
+          <Button href="#" className="add">Agregar Texto</Button>
+      </div>
+     <Col sm={4}>
+        <Row className="up">
+          <Button className="btnD">↑</Button>
+        </Row>
+        <ButtonGroup bsSize="small"  className="btnD">
         <Button className="btnD">←</Button>
         <Button className="btnD">↓</Button>
         <Button className="btnD">→</Button>
         </ButtonGroup>
-        </div>
-      </Col>
-      <Col>
-      <div>
-      <ButtonGroup >
-        <Button className="btnD" >+</Button>
-        <Button className="btnD">-</Button>
-      </ButtonGroup>
-      </div>
-      </Col>
-      <Col>
-        <div className="keyDirection">
-        <ButtonGroup className="bloque">
-        <Button className="btnD">Lf</Button>
-        <Button className="btnD">C</Button>
-        <Button className="btnD">Rg</Button>
-        </ButtonGroup>
-        <ButtonGroup >
-        <Button className="btnD">Top</Button>
-        <Button className="btnD" >Mid</Button>
-        <Button className="btnD">Bot</Button>
-        </ButtonGroup>
-        </div>
-        </Col>
-      <Col>
-      <div>
-      <ButtonGroup >
-        <Button className="btnD">Fr</Button>
-        <Button className="btnD">Back</Button>
-      </ButtonGroup>
-      </div>
-      </Col>
+     </Col>
+    <Col sm={2} >
+    <ButtonToolbar>
+      <ButtonGroup bsSize="small">
+      <Row>
+        <Button className="btnD">+</Button>
       </Row>
-    </div>
+      <Row>
+        <Button className="btnD">-</Button>
+      </Row>
+      </ButtonGroup>
+      </ButtonToolbar>
+    </Col>
+    </Row>
+
+<Row className="addGroup">
+  <div>
+    <Button href="#" className="add">Agregar Imagen</Button>
+  </div>
+       <Col sm={4} md={4}>
+       <div>
+        <ButtonToolbar>
+          <ButtonGroup bsSize="small" className="bloque">
+          <Button className="btnD">Lef</Button>
+          <Button className="btnD">Cen</Button>
+          <Button className="btnD">Rig</Button>
+          </ButtonGroup>
+        </ButtonToolbar>
+        <ButtonToolbar>
+          <ButtonGroup bsSize="small">
+          <Button className="btnD">Top</Button>
+          <Button className="btnD" >Mid</Button>
+          <Button className="btnD">Bot</Button>
+          </ButtonGroup>
+        </ButtonToolbar>
+        </div>
+       </Col>
+      <Col sm={2}>
+      <ButtonToolbar>
+      <ButtonGroup bsSize="small">
+      <Row>
+        <Button className="btnD">Fron</Button>
+      </Row>
+      <Row>
+        <Button className="btnD">Back</Button>
+        </Row>
+      </ButtonGroup>
+      </ButtonToolbar>
+      </Col>
+</Row>
+</div>
   );
 };
 

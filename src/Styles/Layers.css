@@ -187,14 +187,8 @@ body {
 }
 .add{
     margin:2em;
+    width: 40%;
 }
-.keyDirection{
-    position: relative;
-}
-.bloque{
-    display: block;
-}
-.btnD{
-    position: relative;
-    width: 40%; 
+.up{
+    margin-left: 17%;
 }
