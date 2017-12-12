@@ -46,13 +46,13 @@ const Add = () => {
   );
 };
 
-export const Layers = ({age, sizeOptions }) => {
+export const Layers = ({age, sizeOptions, imgs }) => {
   return <Grid fluid>
       <Row>
         <Col md={6} sm={6}>
           <div className="GroupTest">
             <div className="center-block">
-              <img src='images/img.png' width={350} height={450} />
+              <img src={imgs[0]} width={350} height={450} />
             </div>
           </div>
 
