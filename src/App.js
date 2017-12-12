@@ -16,7 +16,8 @@ const App = ({title, genderSelect, ageSelected, age, sizeOptions, imgs, imgSelec
           <Route exact path="/check" render={() => <Check imgs={imgs} color={color} gender={gender} age={ageTxt} size={size} />} />
           <Route render={() => <Redirect to={"/"} />}/>
       </Switch>
-    </HashRouter>)
+    </HashRouter>
+  )
 }
 
 const mapToProps = ({title, genderSelect, ageSelected, age, sizeOptions, imgs, imgSelected, color, gender, size, ageTxt, colorOptions, allImage}) => ({title, genderSelect, ageSelected, age, sizeOptions, imgs, imgSelected, color, gender, size, ageTxt, colorOptions, allImage})
