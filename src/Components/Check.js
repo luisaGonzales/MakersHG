@@ -11,17 +11,18 @@ import {
 } from "react-bootstrap";
 import { Brand } from "./Brand";
 
-export const Check = ({ imgs, color, gender, age, size, colorOptions, imgSelected }) => {
+export const Check = ({age, imgs, color, gender, ageN, size, colorOptions, imgSelected }) => {
+    const img = `http://174.138.48.60/makers/build/Assets/img/${gender}/${ageN}/${color}/` + "front.png";
          //   const views = imgs.map((img, index) => {
          //     return <div className="imgEnd">
          //         <Image className="img-responsive" key={index} src={img} />
          //       </div>;
-         console.log("colorOptions", colorOptions, "gender", gender, "age", age, "imgSelected", imgSelected);
+         console.log("es", img);
          return <Grid fluid>
              <Row>
                <Brand />
                <Col sm={6} md={6} xs={6}>
-                 <Image className="img-responsive" src={colorOptions[gender][age].front.png} />
+                 <Image className="img-responsive" src={img} />
                </Col>
                <Col sm={6} md={6} xs={6}>
                  <div>
