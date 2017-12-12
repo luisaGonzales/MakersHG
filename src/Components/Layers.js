@@ -65,13 +65,8 @@ export const Layers = ({age, sizeOptions, imgs, imgSelected }) => {
             </div>
           </div>
           <Add />
-<<<<<<< HEAD
           <ImageUpload />
-          <Button className="center-block">Finalizar</Button>
-        <Button>Finalizar</Button>
-=======
         <NavLink to='/check'>Finalizar</NavLink>
->>>>>>> cb18f674d0a8862028a1c2b609c236afe4372f53
         </Col>
         <Col md={6} sm={6}>
           <div className="GroupTest">
