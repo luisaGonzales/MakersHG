@@ -108,7 +108,7 @@ const Gender = () => {
 
 const Age = () => {
   return (
-    <Row>
+    <Row className='textAge'>
       <h2>Selecciona tu edad</h2>
       <Col md={4}>
         <div
@@ -116,7 +116,7 @@ const Age = () => {
             selectAge(0);
           }}
         >
-          Adult
+          Adulto
         </div>
       </Col>
       <Col md={4}>
@@ -125,7 +125,7 @@ const Age = () => {
             selectAge(1);
           }}
         >
-          Boy
+          Niño/Niña
         </div>
       </Col>
       <Col md={4}>
@@ -134,7 +134,7 @@ const Age = () => {
             selectAge(2);
           }}
         >
-          Baby
+          Bebe
         </div>
       </Col>
     </Row>

@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 * {
   font-family: 'Cabin', sans-serif;
 
 }
+.textAge div {
+  font-family: 'Pacifico', cursive;
+  font-size: 4.5rem;
+  margin: 10px 0;
 
+}
 #male {
   background-image: url(./img/men.jpg);
   background-repeat: no-repeat;
