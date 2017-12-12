@@ -14,27 +14,32 @@ export const selectGender = gender => {
     .set(store.getState().gender);
 };
 
-export const selectAge = age => {
-  let actualSize = store.getState().size;
-  store.setState({
-    age: age,
-    ageSelected: true
-  });
-  console.log("store age", store.getState().age);
-  firebase
-    .database()
-    .ref("users/age")
-    .set(store.getState().age);
-};
+export const selectAge = (age) => {
+    let actualSize = store.getState().size;
+    let newAgeTxt = "";
+    if(age == 0) {
+        newAgeTxt = "Adulto";
+    } else if (age == 1) {
+        newAgeTxt = "Niño / Niña"
+    } else if (age == 2) {
+        newAgeTxt = "Bebé";
+    }
+    store.setState({
+        age: age, 
+        ageSelected: true, 
+        ageTxt : newAgeTxt
+    });
+    console.log('store age', store.getState().age);
+    firebase.database().ref('users/age').set(store.getState().age);
+}
 
-export const selectSize = size => {
-  console.log("sizeSIZE", size);
-  store.setState({
-    size: size,
-    ageSelected: true
-  });
-  console.log("store size", store.getState().size);
-};
+export const selectSize = (size) => {
+    console.log("sizeSIZE", size);
+    store.setState({
+        size : size, 
+    });
+    console.log("store size", store.getState().size);
+}
 
 export const changeView = view => {
   console.log("view", view);
