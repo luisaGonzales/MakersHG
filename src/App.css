@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin');
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url("https://fonts.googleapis.com/css?family=Cabin");
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
 
 * {
-  font-family: 'Cabin', sans-serif;
-
+  font-family: "Cabin", sans-serif;
+}
+.textAge {
+  cursor: pointer;
 }
 .textAge div {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   font-size: 4.5rem;
   margin: 10px 0;
-
 }
 #male {
   background-image: url(./img/men.jpg);
@@ -17,54 +18,31 @@
   background-size: contain;
   width: 450px;
   height: 420px;
+  cursor: pointer;
 }
 
-  #female {
+#female {
   background-image: url(./img/woman.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 450px;
   height: 420px;
+  cursor: pointer;
 }
 
-
-.content {
-  padding-top: 70px;
+.blockAll {
+  margin: 24px 0;
 }
-
-.navbar-blue .navbar-nav>li.active:not(.disabled)>a,
-.navbar-blue .navbar-nav>li.open:not(.disabled)>a,
-.navbar-blue .navbar-nav>li:not(.disabled)>a:focus,
-.navbar-blue .navbar-nav>li:not(.disabled)>a:hover {
-  color: white;
-  background-color: #1E5FE0;
+.textDesign {
+  font-size: 1.3em;
+  margin: 6px;
+  padding: 6px;
 }
+h2 {
+  font-size: 2em;
+  color: gray;
+  font-weight: bolder;
+  margin: 9px;
+  padding: 9px;
 
-.navbar-blue .navbar-nav>li.active:not(.disabled)>a,
-.navbar-blue .navbar-nav>li.open:not(.disabled)>a,
-.navbar-blue .navbar-nav>li:not(.disabled)>a:focus,
-.navbar-blue .navbar-nav>li:not(.disabled)>a:hover {
-  border-left-width: 5px;
-  color: white;
-  padding-left: 10px;
-}
-
-.navbar-blue {
-  background-color: blue;
-  border-color: white;
-  border-radius: 0;
-  margin-bottom: 0;
-  z-index: 100;
-}
-
-.navbar-blue .navbar-brand {
-  color: white;
-}
-
-.navbar-blue .navbar-brand:hover {
-  color: white;
-}
-
-.navbar-blue .navbar-link {
-  color: white
 }
