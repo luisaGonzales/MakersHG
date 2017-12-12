@@ -167,10 +167,14 @@ body {
 }
  .groupSpan {
      color:black;
+     background: rgb(241, 219, 189);
+     border: 0 !important; 
+     margin: 3px;
+     padding: 2px auto !important;
      
 }
-.groupSpan:active {
-    background: black;
+.groupActive {
+    background: rgb(235, 158, 71) !important;
 }
 
 .test {
@@ -179,5 +183,5 @@ body {
     max-width: 350px;
 }
 * {
-    
+
 }

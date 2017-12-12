@@ -31,57 +31,50 @@ const Colors = () => {
 };
 
 const Design = () => {
-  return (
-    <div>
+  return <div>
       <h2>Diseñar Articulo</h2>
       <ButtonGroup>
-        <Button href="#">Agregar Texto</Button>
+        <Button className="groupSpan" href="#">
+          Agregar Texto
+        </Button>
 
-        <Button href="#">Agregar Imagen</Button>
+        <Button className="groupSpan" href="#">
+          Agregar Imagen
+        </Button>
       </ButtonGroup>
-    </div>
-  );
+    </div>;
 };
 
-const Add = () => {
-  return (
-    <ButtonGroup className="btnGroup justified">
-      <Button
-        onClick={() => {
+const Add = ({imgSelected}) => {
+    console.log("imgSelected", imgSelected);
+  return <ButtonGroup className="btnGroup justified">
+      <Button className={imgSelected == 0 ? "groupActive" : "groupSpan"} onClick={() => {
           changeView(0);
-        }}
-      >
+        }}>
         Frente
       </Button>
-      <Button
-        onClick={() => {
+      <Button className={imgSelected == 1 ? "groupActive" : "groupSpan"} onClick={() => {
           changeView(1);
-        }}
-      >
+        }}>
         Espalda
       </Button>
-      <Button
-        onClick={() => {
+      <Button className={imgSelected == 2 ? "groupActive" : "groupSpan"} onClick={() => {
           changeView(2);
-        }}
-      >
+        }}>
         Manga Derecha
       </Button>
-      <Button
-        onClick={() => {
+      <Button className={imgSelected == 3 ? "groupActive" : "groupSpan"} onClick={() => {
           changeView(3);
-        }}
-      >
+        }}>
         Manga Izquierda
       </Button>
-    </ButtonGroup>
-  );
+    </ButtonGroup>;
 };
 
-export const Layers = ({ age, sizeOptions, imgs, imgSelected }) => {
-  return (
-    <Grid fluid>
-      <Brand/>
+export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size }) => {
+    console.log('age', age)
+  return <Grid fluid>
+      <Brand />
       <Row>
         <Col md={6} sm={6}>
           <div className="GroupTest">
@@ -89,17 +82,16 @@ export const Layers = ({ age, sizeOptions, imgs, imgSelected }) => {
               <img src={imgs[imgSelected]} width={350} height={450} />
             </div>
           </div>
-          <Add />
+          <Add imgSelected={imgSelected} />
           <NavLink to="/check">Finalizar</NavLink>
         </Col>
         <Col md={6} sm={6}>
           <div className="GroupTest">
             <Design />
             <Colors />
-            <Sizes age={age} sizeOptions={sizeOptions} />
+            <Sizes imgSelected={imgSelected} size={size} age={age} sizeOptions={sizeOptions} />
           </div>
         </Col>
       </Row>
-    </Grid>
-  );
+    </Grid>;
 };
