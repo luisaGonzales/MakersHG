@@ -21,20 +21,22 @@ export const Check = ({age, imgs, color, gender, ageN, size, colorOptions, imgSe
          return <Grid fluid>
              <Row>
                <Brand />
-               <Col sm={6} md={6} xs={6}>
-                 <Image className="img-responsive" src={img} />
-               </Col>
-               <Col sm={6} md={6} xs={6}>
-                 <div>
-                   <h2>DETALLES</h2>
-                   <div className="colors">
-                     <div>Género: {gender}</div>
-                     <div>Tamaño: {age}</div>
-                     <div>Color: {color}</div>
-                     <div>Talla: {size}</div>
+               <div className="bgOrange">
+                 <Col sm={6} md={6} xs={6}>
+                   <Image className="img-responsive" src={img} />
+                 </Col>
+                 <Col sm={6} md={6} xs={6}>
+                   <div>
+                     <h2>DETALLES</h2>
+                     <div className="colors">
+                       <p>Género: {gender}</p>
+                       <p>Tamaño: {age}</p>
+                       <p>Color: {color}</p>
+                       <p>Talla: {size}</p>
+                     </div>
                    </div>
-                 </div>
-               </Col>
+                 </Col>
+               </div>
              </Row>
            </Grid>;
        };

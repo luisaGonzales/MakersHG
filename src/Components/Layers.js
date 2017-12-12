@@ -81,15 +81,15 @@ const Colors = ({colorOptions, gender, age}) => {
 };
 
 const Design = () => {
-  return (
-    <div>
+  return <div>
       <h2>Diseñar Articulo</h2>
 
       <Row className="addGroup">
         <div>
-          <Button href="#" className=" groupSpan add">
+          <Button href="#" id="addToDoButton" className=" groupSpan add">
             Agregar Texto
           </Button>
+          <input placeholder="text" id="newToDoText" />
         </div>
         <Col sm={4}>
           <Row className="up">
@@ -117,9 +117,9 @@ const Design = () => {
 
       <Row className="addGroup">
         <div>
-          <Button onClick={()=> {
+          <Button onClick={() => {
               draw();
-          }} className="groupSpan add">
+            }} className="groupSpan add">
             Agregar Imagen
           </Button>
         </div>
@@ -154,8 +154,7 @@ const Design = () => {
           </ButtonToolbar>
         </Col>
       </Row>
-    </div>
-  );
+    </div>;
 };
 
 const Add = ({ imgSelected }) => {

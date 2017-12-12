@@ -6,6 +6,7 @@
 }
 .textAge {
   cursor: pointer;
+  margin: 40px;
 }
 .textAge div {
   font-family: "Pacifico", cursive;
@@ -14,12 +15,12 @@
 }
 #male {
   background-image: url(./img/men.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 430px;
-  height:300px;
-  cursor: pointer;
-  /* margin-top: 25px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 430px;
+    height: 206px;
+    cursor: pointer;
 }
 #male:hover {
   box-shadow: 0 0 35px 20px rgba(79, 69, 66, 0.2);
@@ -32,13 +33,13 @@
 } */
 
 #female {
-  background-image: url(./img/woman.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 430px;
-  height: 300px;
-  cursor: pointer;
-  /* margin-top: 25px; */
+    background-image: url(./img/woman.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 430px;
+    height: 206px;
+    cursor: pointer;
 }
 #female:hover {
   box-shadow: 0 0 25px 20px rgba(79, 69, 66, 0.2);
