@@ -6,10 +6,12 @@ import {
   ButtonGroup,
   Button,
   DropdownButton,
-  MenuItem
+  MenuItem, 
+  Image
 } from "react-bootstrap";
 import "../Styles/Layers.css";
 import {Sizes} from './Sizes';
+import {changeView} from '../Actions/Actions';
 
 const Colors = () => {
   return (
@@ -38,24 +40,23 @@ const Design = () => {
 const Add = () => {
   return (
     <ButtonGroup className="btnGroup" justified>
-      <Button href="#">Frente</Button>
-      <Button href="#">Espalda</Button>
-      <Button href="#">Manga Derecha</Button>
-      <Button href="#">Manga Izquierda</Button>
+      <Button href="#" onClick={()=>{changeView(0)}}>Frente</Button>
+      <Button href="#" onClick={()=>{changeView(1)}}>Espalda</Button>
+      <Button href="#" onClick={()=>{changeView(2)}}>Manga Derecha</Button>
+      <Button href="#" onClick={()=>{changeView(3)}}>Manga Izquierda</Button>
     </ButtonGroup>
   );
 };
 
-export const Layers = ({age, sizeOptions }) => {
+export const Layers = ({age, sizeOptions, imgs, imgSelected }) => {
   return <Grid fluid>
       <Row>
         <Col md={6} sm={6}>
           <div className="GroupTest">
             <div className="center-block">
-              <img src='images/img.png' width={350} height={450} />
+              <img src={imgs[imgSelected]} width={350} height={450} />
             </div>
           </div>
-
           <Add />
         </Col>
         <Col md={6} sm={6}>

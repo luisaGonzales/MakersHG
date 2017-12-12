@@ -28,3 +28,11 @@ export const selectSize = (size) => {
     });
     console.log("store size", store.getState().size);
 }
+
+export const changeView = (view) => {
+    console.log("view", view);
+    store.setState({
+        imgSelected : view
+    });
+    console.log("store view", store.getState().imgSelected);
+}
