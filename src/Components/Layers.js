@@ -59,8 +59,8 @@ export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size, gender
           </Row>
         </Col>
       </Row>
-    </Grid>;
-};
+    </Grid>
+  )};
 
 const Colors = ({colorOptions, gender, age}) => {
     let colorPick = colorOptions[gender][age];
