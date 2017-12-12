@@ -15,11 +15,9 @@
 #male {
   background-image: url(./img/men.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 430px;
-  height: 235px;
-  /* position: relative;
-  right: 43px; */
+  height:300px;
   cursor: pointer;
   /* margin-top: 25px; */
 }
@@ -36,9 +34,9 @@
 #female {
   background-image: url(./img/woman.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 430px;
-  height: 235px;
+  height: 300px;
   cursor: pointer;
   /* margin-top: 25px; */
 }
