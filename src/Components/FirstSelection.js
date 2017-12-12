@@ -57,21 +57,21 @@ const Age = () => {
             </h2>
             <Col md={4}>
                 <div onClick={() => {
-                    selectAge("adult")
+                    selectAge(0)
                 }}>
                     Adult
                 </div>
             </Col>
             <Col md={4}>
                 <div onClick={() => {
-                    selectAge("boy")
+                    selectAge(1)
                 }}>
                     Boy
                 </div>
             </Col>
             <Col md={4}>
                 <div onClick={() => {
-                    selectAge("baby")
+                    selectAge(2)
                 }}>Baby</div>
             </Col>
         </Row>
