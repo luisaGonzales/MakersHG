@@ -8,7 +8,7 @@
     top: 0px;
     width: 300px;
     height: 100%;
-    color: #e1ffff;
+    color: #0e2020;
 }
 
 .nav-side-menu .brand {
@@ -159,4 +159,25 @@
 body {
     margin: 0px;
     padding: 0px;
+}
+
+.btnGroup {
+    position: relative;
+    
+}
+ .groupSpan {
+     color:black;
+     
+}
+.groupSpan:active {
+    background: black;
+}
+
+.test {
+    background-color: green;
+    max-height: 450px;
+    max-width: 350px;
+}
+* {
+    
 }
