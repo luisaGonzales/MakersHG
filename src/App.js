@@ -5,15 +5,15 @@ import {HashRouter, Route, Switch, Redirect} from 'react-router-dom';
 import {Menu} from './Components/FirstSelection';
 import {Layers} from './Components/Layers';
 import {Check} from './Components/Check';
+import { Steps } from "./Components/Steps";
 
 const App = ({title, genderSelect, ageSelected, age, sizeOptions, imgs, imgSelected})=> {
-  return(
-    <HashRouter>
+  return(<HashRouter>
       <Switch>
-          <Route exact path="/" render={() => <Menu title={title} genderSelect={genderSelect} ageSelected={ageSelected} />} />
-          <Route exact path="/menu" render={() => <Menu title={title} genderSelect={genderSelect} ageSelected={ageSelected} />} />
+          <Route exact path="/" component={Steps} />
+          {/* <Route exact path="/menu" render={() => <Menu title={title} genderSelect={genderSelect} ageSelected={ageSelected} />} />
           <Route exact path="/layers" render={() => <Layers age={age}  sizeOptions={sizeOptions} imgs={imgs} imgSelected={imgSelected} />} />
-          <Route exact path="/check" render={() => <Check />} />
+          <Route exact path="/check" render={() => <Check />} /> */}
           <Route render={() => <Redirect to={"/"} />}/>
       </Switch>
     </HashRouter>
