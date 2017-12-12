@@ -11,9 +11,12 @@ import {
 } from "react-bootstrap";
 import { Brand } from "./Brand";
 
-export const Check = ({age, imgs, color, gender, ageN, size, colorOptions, imgSelected }) => {
-    const img = `http://174.138.48.60/makers/build/Assets/img/${gender}/${ageN}/${color}/` + "front.png";
-         //   const views = imgs.map((img, index) => {
+export const Check = ({age, imgs, color, gender, ageN, size, colorOptions, imgSelected, allImage }) => {
+    let img = `http://174.138.48.60/makers/build/Assets/img/${gender}/${ageN}/${color}/` + "front.png";
+    if (!allImage == null) {
+      img = allImage
+    }
+    //   const views = imgs.map((img, index) => {
          //     return <div className="imgEnd">
          //         <Image className="img-responsive" key={index} src={img} />
          //       </div>;
