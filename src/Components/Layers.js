@@ -42,11 +42,11 @@ export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size, gender
         </Col>
         <Col md={7} sm={7}>
           <Row className="GroupTest">
-            <Col sm={6} md={6} lg={6} xs={12}>
+            <Col sm={12} md={6} lg={6} xs={12}>
               {" "}
               <Design />
             </Col>
-            <Col sm={6} md={6} lg={6} xs={12}>
+            <Col sm={12} md={6} lg={6} xs={12}>
               <Colors colorOptions={colorOptions} gender={gender} age={age}/>
               <Sizes
                 imgSelected={imgSelected}
@@ -92,14 +92,16 @@ const Design = () => {
           </Button>
         </div>
         <Col sm={4}>
-          <Row className="up">
-            <Button className=" groupSpan btnD">↑</Button>
-          </Row>
+          <div className="up">
+            <Button className=" groupSpan ">↑</Button>
+          </div>
+            <Row>
           <ButtonGroup bsSize="small" className="btnD">
-            <Button className=" groupSpan btnD">←</Button>
-            <Button className=" groupSpan btnD">↓</Button>
-            <Button className=" groupSpan btnD">→</Button>
+            <Button className=" groupSpan">←</Button>
+            <Button className=" groupSpan">↓</Button>
+            <Button className=" groupSpan">→</Button>
           </ButtonGroup>
+          </Row>
         </Col>
         <Col sm={2}>
           <ButtonToolbar>
@@ -125,16 +127,16 @@ const Design = () => {
           <div>
             <ButtonToolbar>
               <ButtonGroup bsSize="small" className="bloque">
-                <Button className="groupSpan btnD">Lef</Button>
-                <Button className="groupSpan btnD">Cen</Button>
-                <Button className="groupSpan btnD">Rig</Button>
+                <Button className="groupSpan btnD">Lf</Button>
+                <Button className="groupSpan btnD">Cn</Button>
+                <Button className="groupSpan btnD">Rg</Button>
               </ButtonGroup>
             </ButtonToolbar>
             <ButtonToolbar>
               <ButtonGroup bsSize="small">
-                <Button className="groupSpan btnD">Top</Button>
-                <Button className="groupSpan btnD">Mid</Button>
-                <Button className="groupSpan btnD">Bot</Button>
+                <Button className="groupSpan btnD">Tp</Button>
+                <Button className="groupSpan btnD">Md</Button>
+                <Button className="groupSpan btnD">Bt</Button>
               </ButtonGroup>
             </ButtonToolbar>
           </div>
@@ -143,10 +145,10 @@ const Design = () => {
           <ButtonToolbar>
             <ButtonGroup bsSize="small">
               <Row>
-                <Button className="groupSpan btnD">Fron</Button>
+                <Button className="groupSpan btnD">Fr</Button>
               </Row>
               <Row>
-                <Button className="groupSpan btnD">Back</Button>
+                <Button className="groupSpan btnD">Bc</Button>
               </Row>
             </ButtonGroup>
           </ButtonToolbar>

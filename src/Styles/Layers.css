@@ -186,24 +186,8 @@ body {
     margin: 0.5em;
 }
 .add{
-    margin:2em;
-    width: 40%;
+    display: -ms-inline-grid;
 }
 .up{
-    margin-left: 17%;
+    padding-left: 14px;
 }
-
-
-
-/* .imgEnd {
-    width: 350px;
-    height: 350px;
-    background: rgb(158, 103, 103);
-    position: absolute;
-
-}
-.imgEnd img {
-    width: 150px;
-    height: 150px;
-    position: relative;
-} */
