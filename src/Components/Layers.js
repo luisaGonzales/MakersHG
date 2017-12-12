@@ -16,7 +16,7 @@ import { changeView } from "../Actions/Actions";
 import { ImageUpload } from "./Upload";
 import { Redirect } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { Brand } from "./FirstSelection";
+import { Brand } from "./Brand";
 
 const Colors = () => {
   return (

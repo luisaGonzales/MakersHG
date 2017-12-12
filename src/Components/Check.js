@@ -9,10 +9,13 @@ import {
   MenuItem,
   Image
 } from "react-bootstrap";
+import {Brand} from './Brand';
 
 export const Check = () => {
-    return <Grid>
+    return (
+    <Grid fluid>
         <Row>
+            <Brand />
           <Col sm={6} md={6} />
           <Col sm={6} md={6}>
             <div>
@@ -24,5 +27,6 @@ export const Check = () => {
             </div>
           </Col>
         </Row>
-      </Grid>;
+      </Grid>
+    );
 }
