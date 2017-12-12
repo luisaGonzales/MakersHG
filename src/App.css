@@ -1,28 +1,63 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+* {
+  font-family: 'Cabin', sans-serif;
+
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#male {
+  background-image: url(./img/men.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 450px;
+  height: 420px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  #female {
+  background-image: url(./img/woman.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 450px;
+  height: 420px;
+}
+
+
+.content {
+  padding-top: 70px;
+}
+
+.navbar-blue .navbar-nav>li.active:not(.disabled)>a,
+.navbar-blue .navbar-nav>li.open:not(.disabled)>a,
+.navbar-blue .navbar-nav>li:not(.disabled)>a:focus,
+.navbar-blue .navbar-nav>li:not(.disabled)>a:hover {
+  color: white;
+  background-color: #1E5FE0;
+}
+
+.navbar-blue .navbar-nav>li.active:not(.disabled)>a,
+.navbar-blue .navbar-nav>li.open:not(.disabled)>a,
+.navbar-blue .navbar-nav>li:not(.disabled)>a:focus,
+.navbar-blue .navbar-nav>li:not(.disabled)>a:hover {
+  border-left-width: 5px;
+  color: white;
+  padding-left: 10px;
+}
+
+.navbar-blue {
+  background-color: blue;
+  border-color: white;
+  border-radius: 0;
+  margin-bottom: 0;
+  z-index: 100;
+}
+
+.navbar-blue .navbar-brand {
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.navbar-blue .navbar-brand:hover {
+  color: white;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.navbar-blue .navbar-link {
+  color: white
 }
