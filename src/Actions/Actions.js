@@ -32,12 +32,10 @@ export const selectAge = (age) => {
 
 export const selectSize = (size) => {
     console.log("sizeSIZE", size);
-    
     store.setState({
         size : size, 
     });
     console.log("store size", store.getState().size);
-    console.log("store size txt", store.getState().sizeTxt);
 }
 
 export const changeView = (view) => {
