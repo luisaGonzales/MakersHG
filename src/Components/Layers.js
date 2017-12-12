@@ -44,42 +44,42 @@ const Design = () => {
         <Col >
         <div className="keyDirection">
         <Col className="keys">
-        <Button className="up">↑</Button>
+        <Button className="btnD">↑</Button>
         </Col>
-        <ButtonGroup  className="keys">
-        <Button className="left">←</Button>
-        <Button className="down">↓</Button>
-        <Button className="right">→</Button>
+        <ButtonGroup  className="btnD">
+        <Button className="btnD">←</Button>
+        <Button className="btnD">↓</Button>
+        <Button className="btnD">→</Button>
         </ButtonGroup>
         </div>
       </Col>
       <Col>
       <div>
       <ButtonGroup >
-        <Button >+</Button>
-        <Button >-</Button>
+        <Button className="btnD" >+</Button>
+        <Button className="btnD">-</Button>
       </ButtonGroup>
       </div>
       </Col>
       <Col>
         <div className="keyDirection">
         <ButtonGroup className="bloque">
-        <Button>Lf</Button>
-        <Button >C</Button>
-        <Button >Rg</Button>
+        <Button className="btnD">Lf</Button>
+        <Button className="btnD">C</Button>
+        <Button className="btnD">Rg</Button>
         </ButtonGroup>
         <ButtonGroup >
-        <Button>Top</Button>
-        <Button >Mid</Button>
-        <Button >Bot</Button>
+        <Button className="btnD">Top</Button>
+        <Button className="btnD" >Mid</Button>
+        <Button className="btnD">Bot</Button>
         </ButtonGroup>
         </div>
         </Col>
       <Col>
       <div>
       <ButtonGroup >
-        <Button >Fr</Button>
-        <Button >Back</Button>
+        <Button className="btnD">Fr</Button>
+        <Button className="btnD">Back</Button>
       </ButtonGroup>
       </div>
       </Col>
