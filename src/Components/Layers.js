@@ -64,12 +64,9 @@ export const Layers = ({age, sizeOptions, imgs, imgSelected }) => {
             </div>
           </div>
           <Add />
-<<<<<<< HEAD
           <ImageUpload />
           <Button className="center-block">Finalizar</Button>
-=======
         <Button>Finalizar</Button>
->>>>>>> 9ee746f2ac52468b8a22c578675307f90a8af66b
         </Col>
         <Col md={6} sm={6}>
           <div className="GroupTest">
