@@ -12,7 +12,7 @@ import {
 import "../Styles/Layers.css";
 import {Sizes} from './Sizes';
 import {changeView} from '../Actions/Actions';
-import {Redirect} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const Colors = () => {
   return (
@@ -59,7 +59,7 @@ export const Layers = ({age, sizeOptions, imgs, imgSelected }) => {
             </div>
           </div>
           <Add />
-        <Button>Finalizar</Button>
+        <NavLink to='/check'>Finalizar</NavLink>
         </Col>
         <Col md={6} sm={6}>
           <div className="GroupTest">
