@@ -182,10 +182,6 @@ body {
     max-height: 450px;
     max-width: 350px;
 }
-* {
-    
-}
-
 .addGroup{
     margin: 0.5em;
 }
@@ -196,3 +192,18 @@ body {
 .up{
     margin-left: 17%;
 }
+
+
+
+/* .imgEnd {
+    width: 350px;
+    height: 350px;
+    background: rgb(158, 103, 103);
+    position: absolute;
+
+}
+.imgEnd img {
+    width: 150px;
+    height: 150px;
+    position: relative;
+} */

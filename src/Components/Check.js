@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 import {
   Grid,
   Row,
@@ -9,33 +9,33 @@ import {
   MenuItem,
   Image
 } from "react-bootstrap";
-import {Brand} from './Brand';
+import { Brand } from "./Brand";
 
-export const Check = ({imgs, color, gender, age, size }) => {
-    const views = imgs.map((img, index) => {
-        return (
-            <Image key={index} src={img}/>
-        );
-    })
-    return (
+export const Check = ({ imgs, color, gender, age, size }) => {
+  const views = imgs.map((img, index) => {
+    return <div className="imgEnd">
+        <Image className="img-responsive" key={index} src={img} />
+      </div>;
+  });
+  return (
     <Grid fluid>
-        <Row>
-            <Brand />
-          <Col sm={6} md={6} >
-            {views}
-          </Col>
-          <Col sm={6} md={6}>
-            <div>
-              <h2>DETALLES</h2>
-              <div className= "colors">
-                <div>Género: {gender}</div>
-                <div>Tamaño: {age}</div>
-                <div>Color: {color}</div>
-                <div>Talla: {size}</div>
-              </div>
+      <Row>
+        <Brand />
+        <Col sm={6} md={6} xs={6}>
+          {views}
+        </Col>
+        <Col sm={6} md={6} xs={6} >
+          <div>
+            <h2>DETALLES</h2>
+            <div className="colors">
+              <div>Género: {gender}</div>
+              <div>Tamaño: {age}</div>
+              <div>Color: {color}</div>
+              <div>Talla: {size}</div>
             </div>
-          </Col>
-        </Row>
-      </Grid>
-    );
-}
+          </div>
+        </Col>
+      </Row>
+    </Grid>
+  );
+};
