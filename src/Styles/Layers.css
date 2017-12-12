@@ -193,7 +193,10 @@ body {
     margin-left: 17%;
 }
 
-
+.finish {
+    padding: 4px;
+    margin: 4px 0;
+}
 
 /* .imgEnd {
     width: 350px;
