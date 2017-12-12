@@ -1,5 +1,7 @@
-import createStore from 'redux-zero';
+// http://174.138.48.60/makers/build/Assets/img/male/0/white/back.png
 
+import createStore from 'redux-zero';
+ 
 const initialState = {
     title: 'Create it Yourself', 
     gender: null,
@@ -9,13 +11,26 @@ const initialState = {
     sizeOptions : [["XS", "S", "M", "L", "XL", "XXL", "XXXL"], ["10", "12", "14", "16"], ["3", "6", "9", "12", "24"]],
     size : null, 
     ageTxt : null,
-    color: "black",
-    imgs : [
-        "//image.spreadshirtmedia.net/image-server/v1/productTypes/812/views/1/appearances/2?width=350&height=350&mediaType=webp",
-        "//image.spreadshirtmedia.net/image-server/v1/productTypes/812/views/2/appearances/2?width=350&height=350&mediaType=webp",
-        "//image.spreadshirtmedia.net/image-server/v1/productTypes/812/views/3/appearances/2?width=350&height=350&mediaType=webp",
-        "//image.spreadshirtmedia.net/image-server/v1/productTypes/812/views/4/appearances/2?width=350&height=350&mediaType=webp"
-    ],
+    color: "white",
+    colorOptions : {
+        "female" : {
+            "0" : ["black", "blue", "grey", "pink", "red", "white"],
+            "1" : ["green", "orange", "white"],
+            "2" : ["black", "pink", "red", "skyblue", "white"]
+        },
+        "male" : {
+            "0" : ["blue", "green", "red", "skyblue", "white", "yellow"],
+            "1" : ["black", "red", "white"], 
+            "2" : ["black", "blue", "red", "white"]
+        }  
+    },
+    // imgs : [
+    //     `http://174.138.48.60/makers/build/Assets/img/${gender}/${age}/${color}/front.png`,
+    //     `http://174.138.48.60/makers/build/Assets/img/${gender}/${age}/${color}/back.png`,
+    //     `http://174.138.48.60/makers/build/Assets/img/${gender}/${age}/${color}/right.png`,
+    //     `http://174.138.48.60/makers/build/Assets/img/${gender}/${age}/${color}/left.png`        
+    // ],
+    logo: 'http://174.138.48.60/Logo.png',
     imgSelected : 0, 
 }
 

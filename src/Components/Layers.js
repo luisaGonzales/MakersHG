@@ -12,16 +12,20 @@ import {
   FieldGroup
 } from "react-bootstrap";
 import "../Styles/Layers.css";
+import '../Styles/Colors.css';
 import { Brand } from "./Brand";
 import { Sizes } from "./Sizes";
-import { changeView } from "../Actions/Actions";
+import { changeView, selectColor, saveImg } from "../Actions/Actions";
 import { ImageUpload } from "./Upload";
 import { Redirect } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 // import Center from 'react-center';
 
-export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size }) => {
-  console.log("age", age);
+const mapp =  [ 'front.png', 'back.png', 'right.png', 'left.png' ]; 
+
+export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size, gender, color, colorOptions}) => {
+  const img =  `http://174.138.48.60/makers/build/Assets/img/${gender}/${age}/${color}/` + mapp[imgSelected];
+  saveImg(img);
   return (
     <Grid fluid>
       <Brand />
@@ -29,7 +33,7 @@ export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size }) => {
         <Col md={4} sm={4}>
           <div className="GroupTest">
             <div className="center-block">
-              <img src={imgs[imgSelected]} width={350} height={450} />
+              <img src={img} width={350} height={450} />
             </div>
           </div>
           <Add imgSelected={imgSelected} />
@@ -43,7 +47,7 @@ export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size }) => {
               <Design />
             </Col>
             <Col sm={6} md={6} lg={6} xs={12}>
-              <Colors />
+              <Colors colorOptions={colorOptions} gender={gender} age={age}/>
               <Sizes
                 imgSelected={imgSelected}
                 size={size}
@@ -58,17 +62,19 @@ export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size }) => {
   );
 };
 
-const Colors = () => {
+const Colors = ({colorOptions, gender, age}) => {
+    let colorPick = colorOptions[gender][age];
+    console.log(colorPick);
+    const colors = colorPick.map((color, index) => {
+        return(
+            <Button key={index} className={color} onClick={()=>{selectColor(color)}}>  </Button>
+        );
+    })
   return (
     <div>
       <h2>Colores</h2>
       <ButtonGroup>
-        <Button href="#">A</Button>
-        <Button href="#">A</Button>
-        <Button href="#">A</Button>
-        <Button href="#">A</Button>
-        <Button href="#">A</Button>
-        <Button href="#">A</Button>
+        {colors}
       </ButtonGroup>
     </div>
   );
