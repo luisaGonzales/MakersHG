@@ -10,7 +10,7 @@ const initialState = {
     size : null, 
     color: "black",
     imgs : [
-        "//image.spreadshirtmedia.net/image-server/v1/productTypes/812/views/1/appearances/2?width=350&height=350&mediaType=webp",
+        "// ",
         "//image.spreadshirtmedia.net/image-server/v1/productTypes/812/views/2/appearances/2?width=350&height=350&mediaType=webp",
         "//image.spreadshirtmedia.net/image-server/v1/productTypes/812/views/3/appearances/2?width=350&height=350&mediaType=webp",
         "//image.spreadshirtmedia.net/image-server/v1/productTypes/812/views/4/appearances/2?width=350&height=350&mediaType=webp"
