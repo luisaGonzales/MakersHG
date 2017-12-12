@@ -46,7 +46,7 @@ const Design = () => {
 
 const Add = () => {
   return (
-    <ButtonGroup className="btnGroup" justified>
+    <ButtonGroup     className="btnGroup justified" >
       <Button onClick={()=>{changeView(0)}}>Frente</Button>
       <Button onClick={()=>{changeView(1)}}>Espalda</Button>
       <Button onClick={()=>{changeView(2)}}>Manga Derecha</Button>
