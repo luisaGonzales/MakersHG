@@ -48,3 +48,7 @@ export const changeView = view => {
   });
   console.log("store view", store.getState().imgSelected);
 };
+
+export const selectColor = (color) => {
+    console.log("colorpick", color);
+}
