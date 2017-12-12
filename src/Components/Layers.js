@@ -65,7 +65,6 @@ export const Layers = ({age, sizeOptions, imgs, imgSelected }) => {
             </div>
           </div>
           <Add />
-          <ImageUpload />
         <NavLink to='/check'>Finalizar</NavLink>
         </Col>
         <Col md={6} sm={6}>
