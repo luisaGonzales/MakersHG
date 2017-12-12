@@ -30,16 +30,60 @@ const Colors = () => {
 };
 
 
-
 const Design = () => {
   return (
-    <div >
+    <div>
       <h2>Diseñar Articulo</h2>
-      <ButtonGroup>
-        <Button href="#">Agregar Texto</Button>
-        
-        <Button href="#">Agregar Imagen</Button>
+      <Row className="addGroup">
+      <ButtonGroup >
+        <Button href="#" className="add">Agregar Texto</Button>
+        <Button href="#" className="add">Agregar Imagen</Button>
       </ButtonGroup>
+      </Row>
+      <Row>
+        <Col >
+        <div className="keyDirection">
+        <Col className="keys">
+        <Button className="up">↑</Button>
+        </Col>
+        <ButtonGroup  className="keys">
+        <Button className="left">←</Button>
+        <Button className="down">↓</Button>
+        <Button className="right">→</Button>
+        </ButtonGroup>
+        </div>
+      </Col>
+      <Col>
+      <div>
+      <ButtonGroup >
+        <Button >+</Button>
+        <Button >-</Button>
+      </ButtonGroup>
+      </div>
+      </Col>
+      <Col>
+        <div className="keyDirection">
+        <ButtonGroup className="bloque">
+        <Button>Lf</Button>
+        <Button >C</Button>
+        <Button >Rg</Button>
+        </ButtonGroup>
+        <ButtonGroup >
+        <Button>Top</Button>
+        <Button >Mid</Button>
+        <Button >Bot</Button>
+        </ButtonGroup>
+        </div>
+        </Col>
+      <Col>
+      <div>
+      <ButtonGroup >
+        <Button >Fr</Button>
+        <Button >Back</Button>
+      </ButtonGroup>
+      </div>
+      </Col>
+      </Row>
     </div>
   );
 };
@@ -65,6 +109,7 @@ export const Layers = ({age, sizeOptions, imgs, imgSelected }) => {
             </div>
           </div>
           <Add />
+  <NavLink to='/menu'>Atrás</NavLink>
         <NavLink to='/check'>Finalizar</NavLink>
         </Col>
         <Col md={6} sm={6}>

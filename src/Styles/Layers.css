@@ -181,3 +181,17 @@ body {
 * {
     
 }
+
+.addGroup{
+    margin: 0.5em;
+}
+.add{
+    margin:2em;
+}
+.keyDirection{
+    position: relative;
+}
+.bloque{
+    display: block;
+    
+}
