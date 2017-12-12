@@ -33,12 +33,12 @@
 }
 
 .blockAll {
-  margin: 24px 0;
+  margin: 0 24px ;
 }
 .textDesign {
   font-size: 1.4em;
-  margin: 6px;
-  padding: 6px;
+  margin:  5px 16px;
+  padding: 5px 16px;
 }
 h2 {
   font-size: 2em;
