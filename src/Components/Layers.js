@@ -26,27 +26,32 @@ export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size }) => {
     <Grid fluid>
       <Brand />
       <Row>
-        <Col md={6} sm={6}>
+        <Col md={4} sm={4}>
           <div className="GroupTest">
             <div className="center-block">
               <img src={imgs[imgSelected]} width={350} height={450} />
             </div>
           </div>
-          <Add />
+          <Add imgSelected={imgSelected} />
           <NavLink to="/menu">Atrás</NavLink>
           <NavLink to="/check">Finalizar</NavLink>
         </Col>
-        <Col md={6} sm={6}>
-          <div className="GroupTest">
-            <Design />
-            <Colors />
-            <Sizes
-              imgSelected={imgSelected}
-              size={size}
-              age={age}
-              sizeOptions={sizeOptions}
-            />
-          </div>
+        <Col md={7} sm={7}>
+          <Row className="GroupTest">
+            <Col sm={6} md={6} lg={6} xs={12}>
+              {" "}
+              <Design />
+            </Col>
+            <Col sm={6} md={6} lg={6} xs={12}>
+              <Colors />
+              <Sizes
+                imgSelected={imgSelected}
+                size={size}
+                age={age}
+                sizeOptions={sizeOptions}
+              />
+            </Col>
+          </Row>
         </Col>
       </Row>
     </Grid>
