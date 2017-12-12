@@ -7,11 +7,14 @@ import {
   Button,
   DropdownButton,
   MenuItem, 
-  Image
+  Image,
+  FieldGroup 
 } from "react-bootstrap";
 import "../Styles/Layers.css";
 import {Sizes} from './Sizes';
 import {changeView} from '../Actions/Actions';
+import {ImageUpload} from './Upload';
+import {Redirect} from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
 
 const Colors = () => {
@@ -26,12 +29,15 @@ const Colors = () => {
   );
 };
 
+
+
 const Design = () => {
   return (
     <div >
       <h2>Diseñar Articulo</h2>
       <ButtonGroup>
         <Button href="#">Agregar Texto</Button>
+        
         <Button href="#">Agregar Imagen</Button>
       </ButtonGroup>
     </div>
@@ -41,10 +47,10 @@ const Design = () => {
 const Add = () => {
   return (
     <ButtonGroup className="btnGroup" justified>
-      <Button href="#" onClick={()=>{changeView(0)}}>Frente</Button>
-      <Button href="#" onClick={()=>{changeView(1)}}>Espalda</Button>
-      <Button href="#" onClick={()=>{changeView(2)}}>Manga Derecha</Button>
-      <Button href="#" onClick={()=>{changeView(3)}}>Manga Izquierda</Button>
+      <Button onClick={()=>{changeView(0)}}>Frente</Button>
+      <Button onClick={()=>{changeView(1)}}>Espalda</Button>
+      <Button onClick={()=>{changeView(2)}}>Manga Derecha</Button>
+      <Button onClick={()=>{changeView(3)}}>Manga Izquierda</Button>
     </ButtonGroup>
   );
 };
