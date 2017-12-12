@@ -16,25 +16,27 @@
   background-image: url(./img/men.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 450px;
-  height: 420px;
+  width: 500px;
+  height: 250px;
   cursor: pointer;
+  margin-top: 25px;
 }
 
 #female {
   background-image: url(./img/woman.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 450px;
-  height: 420px;
+  width: 500px;
+  height: 250px;
   cursor: pointer;
+  margin-top: 25px;
 }
 
 .blockAll {
   margin: 24px 0;
 }
 .textDesign {
-  font-size: 1.3em;
+  font-size: 1.4em;
   margin: 6px;
   padding: 6px;
 }
@@ -42,7 +44,6 @@ h2 {
   font-size: 2em;
   color: gray;
   font-weight: bolder;
-  margin: 9px;
-  padding: 9px;
-
+  margin: 15px;
+  padding: 15px;
 }

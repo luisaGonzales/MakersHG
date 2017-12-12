@@ -13,7 +13,7 @@ export const Sizes = ({age, sizeOptions}) => {
     });
     return (
       <Row>
-        <h1>Selecciona tu talla</h1>
+        <h2>Selecciona tu talla</h2>
         {listSizes}
       </Row>  
     );  

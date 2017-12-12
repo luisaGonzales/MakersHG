@@ -9,7 +9,8 @@ export const Menu = ({ genderSelect, title, ageSelected }) => {
   return <div className='container-fluid blockAll'>
       <Grid fluid className="text-center">
         <img src={Logo} width="250" height="150" className="img-responsive center-block" />
-        <p className='textDesign'>
+        <hr/>
+        <p className='textDesign text-justify'>
           Personalizar tus prendas con tus propios diseños desde un mismo
           lugar, lo tienes al alcance de un click. Entra para dejar volar tu
           imaginación y para empezar a familiarizarte con todas las funciones
@@ -24,7 +25,7 @@ export const Menu = ({ genderSelect, title, ageSelected }) => {
 
 const Gender = () => {
   return <Row>
-      <h2>¡Primero selecciona tu sexo!</h2>
+      <h2>¡Primero selecciona tu genero!</h2>
       <Col md={6} sm={6} lg={6} xs={6}>
         <div className="selectGender-gender center-block img-responsive" id="male" onClick={() => {
             selectGender("male");
@@ -33,7 +34,7 @@ const Gender = () => {
         </div>
       </Col>
       <Col md={6} sm={6} lg={6} xs={6}  >
-        <div id="female" className="center-block  img-responsive" onClick={() => {
+        <div id="female" className="center-block img-responsive" onClick={() => {
             selectGender("female");
           }}>
           <i className="fa fa-venus fa-lg" aria-hidden="true" />
