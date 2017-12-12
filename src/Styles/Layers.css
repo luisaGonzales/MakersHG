@@ -183,5 +183,16 @@ body {
     max-width: 350px;
 }
 * {
+    
+}
 
+.addGroup{
+    margin: 0.5em;
+}
+.add{
+    margin:2em;
+    width: 40%;
+}
+.up{
+    margin-left: 17%;
 }
