@@ -7,56 +7,17 @@ import {
   Button,
   ButtonToolbar,
   DropdownButton,
-  MenuItem,
+  MenuItem, 
   Image,
-  FieldGroup
+  FieldGroup 
 } from "react-bootstrap";
 import "../Styles/Layers.css";
-import { Brand } from "./Brand";
-import { Sizes } from "./Sizes";
-import { changeView } from "../Actions/Actions";
-import { ImageUpload } from "./Upload";
-import { Redirect } from "react-router-dom";
-import { NavLink } from "react-router-dom";
-// import Center from 'react-center';
-
-export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size }) => {
-  console.log("age", age);
-  return (
-    <Grid fluid>
-      <Brand />
-      <Row>
-        <Col md={4} sm={4}>
-          <div className="GroupTest">
-            <div className="center-block">
-              <img src={imgs[imgSelected]} width={350} height={450} />
-            </div>
-          </div>
-          <Add imgSelected={imgSelected} />
-          <NavLink to="/menu">Atrás</NavLink>
-          <NavLink to="/check">Finalizar</NavLink>
-        </Col>
-        <Col md={7} sm={7}>
-          <Row className="GroupTest">
-            <Col sm={6} md={6} lg={6} xs={12}>
-              {" "}
-              <Design />
-            </Col>
-            <Col sm={6} md={6} lg={6} xs={12}>
-              <Colors />
-              <Sizes
-                imgSelected={imgSelected}
-                size={size}
-                age={age}
-                sizeOptions={sizeOptions}
-              />
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-    </Grid>
-  );
-};
+import {Sizes} from './Sizes';
+import {changeView} from '../Actions/Actions';
+import {ImageUpload} from './Upload';
+import {Redirect} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+import Center from 'react-center';
 
 const Colors = () => {
   return (
@@ -65,127 +26,117 @@ const Colors = () => {
       <ButtonGroup>
         <Button href="#">A</Button>
         <Button href="#">A</Button>
-        <Button href="#">A</Button>
-        <Button href="#">A</Button>
-        <Button href="#">A</Button>
-        <Button href="#">A</Button>
       </ButtonGroup>
     </div>
   );
 };
 
+
 const Design = () => {
   return (
     <div>
       <h2>Diseñar Articulo</h2>
-
       <Row className="addGroup">
-        <div>
-          <Button href="#" className=" groupSpan add">
-            Agregar Texto
-          </Button>
-        </div>
-        <Col sm={4}>
-          <Row className="up">
-            <Button className=" groupSpan btnD">↑</Button>
-          </Row>
-          <ButtonGroup bsSize="small" className="btnD">
-            <Button className=" groupSpan btnD">←</Button>
-            <Button className=" groupSpan btnD">↓</Button>
-            <Button className=" groupSpan btnD">→</Button>
+      <div>
+          <Button href="#" className="add">Agregar Texto</Button>
+      </div>
+     <Col sm={4}>
+        <Row>
+          <Button className="btnD">↑</Button>
+        </Row>
+        <ButtonGroup bsSize="small"  className="btnD">
+        <Button className="btnD">←</Button>
+        <Button className="btnD">↓</Button>
+        <Button className="btnD">→</Button>
+        </ButtonGroup>
+     </Col>
+    <Col sm={2} >
+    <ButtonToolbar>
+      <ButtonGroup bsSize="small">
+      <Row>
+        <Button className="btnD">+</Button>
+      </Row>
+      <Row>
+        <Button className="btnD">-</Button>
+      </Row>
+      </ButtonGroup>
+      </ButtonToolbar>
+    </Col>
+    </Row>
+ 
+
+<Row>
+  <div>
+    <Button href="#" className="add">Agregar Imagen</Button>
+  </div>
+       <Col sm={4} md={4}>
+       <div>
+        <ButtonToolbar>
+          <ButtonGroup bsSize="small" className="bloque">
+          <Button className="btnD">Lef</Button>
+          <Button className="btnD">Cen</Button>
+          <Button className="btnD">Rig</Button>
           </ButtonGroup>
-        </Col>
-        <Col sm={2}>
-          <ButtonToolbar>
-            <ButtonGroup bsSize="small">
-              <Row>
-                <Button className="groupSpan btnD">+</Button>
-              </Row>
-              <Row>
-                <Button className="groupSpan btnD">-</Button>
-              </Row>
-            </ButtonGroup>
-          </ButtonToolbar>
-        </Col>
-      </Row>
-
-      <Row className="addGroup">
-        <div>
-          <Button href="#" className="groupSpan add">
-            Agregar Imagen
-          </Button>
+        </ButtonToolbar>
+        <ButtonToolbar>
+          <ButtonGroup bsSize="small">
+          <Button className="btnD">Top</Button>
+          <Button className="btnD" >Mid</Button>
+          <Button className="btnD">Bot</Button>
+          </ButtonGroup>
+        </ButtonToolbar>
         </div>
-        <Col sm={4} md={4}>
-          <div>
-            <ButtonToolbar>
-              <ButtonGroup bsSize="small" className="bloque">
-                <Button className="groupSpan btnD">Lef</Button>
-                <Button className="groupSpan btnD">Cen</Button>
-                <Button className="groupSpan btnD">Rig</Button>
-              </ButtonGroup>
-            </ButtonToolbar>
-            <ButtonToolbar>
-              <ButtonGroup bsSize="small">
-                <Button className="groupSpan btnD">Top</Button>
-                <Button className="groupSpan btnD">Mid</Button>
-                <Button className="groupSpan btnD">Bot</Button>
-              </ButtonGroup>
-            </ButtonToolbar>
-          </div>
-        </Col>
-        <Col sm={2}>
-          <ButtonToolbar>
-            <ButtonGroup bsSize="small">
-              <Row>
-                <Button className="groupSpan btnD">Fron</Button>
-              </Row>
-              <Row>
-                <Button className="groupSpan btnD">Back</Button>
-              </Row>
-            </ButtonGroup>
-          </ButtonToolbar>
-        </Col>
-      </Row>
-    </div>
+       
+      <Col sm={2}>
+      <ButtonToolbar>
+      <ButtonGroup bsSize="small">
+      <Row></Row>
+        <Button className="btnD">Fr</Button>
+        <Button className="btnD">Back</Button>
+      </ButtonGroup>
+      </ButtonToolbar>
+      </Col>
+
+
+</Row>
+
+
+
+</div>
   );
 };
 
-const Add = ({ imgSelected }) => {
-  console.log("imgSelected", imgSelected);
+const Add = () => {
   return (
-    <ButtonGroup className="btnGroup justified">
-      <Button
-        className={imgSelected == 0 ? "groupActive" : "groupSpan"}
-        onClick={() => {
-          changeView(0);
-        }}
-      >
-        Frente
-      </Button>
-      <Button
-        className={imgSelected == 1 ? "groupActive" : "groupSpan"}
-        onClick={() => {
-          changeView(1);
-        }}
-      >
-        Espalda
-      </Button>
-      <Button
-        className={imgSelected == 2 ? "groupActive" : "groupSpan"}
-        onClick={() => {
-          changeView(2);
-        }}
-      >
-        Manga Derecha
-      </Button>
-      <Button
-        className={imgSelected == 3 ? "groupActive" : "groupSpan"}
-        onClick={() => {
-          changeView(3);
-        }}
-      >
-        Manga Izquierda
-      </Button>
+    <ButtonGroup     className="btnGroup justified" >
+      <Button onClick={()=>{changeView(0)}}>Frente</Button>
+      <Button onClick={()=>{changeView(1)}}>Espalda</Button>
+      <Button onClick={()=>{changeView(2)}}>Manga Derecha</Button>
+      <Button onClick={()=>{changeView(3)}}>Manga Izquierda</Button>
     </ButtonGroup>
   );
+};
+
+export const Layers = ({age, sizeOptions, imgs, imgSelected }) => {
+  return <Grid fluid>
+      <Row>
+        <Col md={6} sm={6}>
+          <div className="GroupTest">
+            <div className="center-block">
+              <img src={imgs[imgSelected]} width={350} height={450} />
+            </div>
+          </div>
+          <Add />
+  <NavLink to='/menu'>Atrás</NavLink>
+        <NavLink to='/check'>Finalizar</NavLink>
+        </Col>
+        <Col md={6} sm={6}>
+          <div className="GroupTest">
+            <Design />
+            <Colors />
+            <Sizes age={age} sizeOptions={sizeOptions} />
+          </div>
+        </Col>
+      </Row>
+    </Grid>;
 };
