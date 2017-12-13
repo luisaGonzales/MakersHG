@@ -67,7 +67,7 @@ export const saveImg = (img) => {
 
 }
 
-export const draw = () => {
+export const draw = (x, y) => {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     var imageObj1 = new Image();
@@ -87,3 +87,4 @@ export const draw = () => {
         }
     };
 }
+

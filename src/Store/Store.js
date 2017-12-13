@@ -32,7 +32,9 @@ const initialState = {
     // ],
     logo: 'http://174.138.48.60/Logo.png',
     imgSelected : 0, 
-    allImage : null
+    allImage : null,
+    x : 200,
+    y : 150
 }
 
 const store = createStore(initialState);
