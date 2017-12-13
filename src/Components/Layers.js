@@ -19,16 +19,21 @@ import { changeView, selectColor, saveImg } from "../Actions/Actions";
 import { ImageUpload } from "./Upload";
 import { Redirect } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import {draw} from '../Actions/Actions';
 // import Center from 'react-center';
 
 const mapp =  [ 'front.png', 'back.png', 'right.png', 'left.png' ]; 
 
-export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size, gender, color, colorOptions}) => {
-  const img =  `http://174.138.48.60/makers/build/Assets/img/${gender}/${age}/${color}/` + mapp[imgSelected];
-  saveImg(img);
+export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size, gender, color, colorOptions, allImage}) => {
+  let img =  `http://174.138.48.60/makers/build/Assets/img/${gender}/${age}/${color}/` + mapp[imgSelected];
+ if ( allImage)
+    img = allImage; 
   return (
     <Grid fluid>
       <Brand />
+      <NavLink className="groupSpan btn" to="/menu">
+        <i class="fa fa-arrow-left fa-4x" aria-hidden="true" />
+      </NavLink>
       <Row>
         <Col md={4} sm={4}>
           <div className="GroupTest">
@@ -37,30 +42,25 @@ export const Layers = ({ view, age, sizeOptions, imgs, imgSelected, size, gender
             </div>
           </div>
           <Add imgSelected={imgSelected} />
-          <NavLink to="/menu">Atrás</NavLink>
-          <NavLink to="/check">Finalizar</NavLink>
         </Col>
         <Col md={7} sm={7}>
           <Row className="GroupTest">
-            <Col sm={12} md={6} lg={6} xs={12}>
-              {" "}
+            <Col sm={6} md={6} lg={6} xs={12}>
               <Design />
             </Col>
-            <Col sm={12} md={6} lg={6} xs={12}>
-              <Colors colorOptions={colorOptions} gender={gender} age={age}/>
-              <Sizes
-                imgSelected={imgSelected}
-                size={size}
-                age={age}
-                sizeOptions={sizeOptions}
-              />
+            <Col sm={6} md={6} lg={6} xs={12}>
+              <Colors colorOptions={colorOptions} gender={gender} age={age} />
+              <Sizes imgSelected={imgSelected} size={size} age={age} sizeOptions={sizeOptions} />
+              <br/>
+              <NavLink className="groupSpan btn finish" to="/check">
+                <b> FINALIZAR</b>
+              </NavLink>
             </Col>
           </Row>
         </Col>
       </Row>
     </Grid>
-  );
-};
+  )};
 
 const Colors = ({colorOptions, gender, age}) => {
     let colorPick = colorOptions[gender][age];
@@ -119,7 +119,9 @@ const Design = () => {
 
       <Row className="addGroup">
         <div>
-          <Button href="#" className="groupSpan add">
+          <Button onClick={()=> {
+              draw();
+          }} className="groupSpan add">
             Agregar Imagen
           </Button>
         </div>

@@ -189,5 +189,23 @@ body {
     display: -ms-inline-grid;
 }
 .up{
-    padding-left: 14px;
+    margin-left: 17%;
 }
+
+.finish {
+    padding: 4px;
+    margin: 4px 0;
+}
+
+/* .imgEnd {
+    width: 350px;
+    height: 350px;
+    background: rgb(158, 103, 103);
+    position: absolute;
+
+}
+.imgEnd img {
+    width: 150px;
+    height: 150px;
+    position: relative;
+} */
